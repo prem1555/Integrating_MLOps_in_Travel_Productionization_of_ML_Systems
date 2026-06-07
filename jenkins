@@ -1,0 +1,39 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Repository Cloned Successfully') {
+
+            steps {
+
+                sh 'echo Repository downloaded successfully'
+
+            }
+
+        }
+
+        stage('CI/CD Pipeline Started') {
+
+            steps {
+
+                sh 'echo Jenkins pipeline execution successful'
+
+            }
+
+        }
+
+        stage('Docker Build Trigger') {
+
+            steps {
+
+                sh 'echo Docker build stage triggered'
+
+            }
+
+        }
+
+    }
+
+}
