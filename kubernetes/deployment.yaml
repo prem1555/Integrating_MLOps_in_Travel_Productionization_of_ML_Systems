@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: voyage-deployment
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: voyage-app
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: voyage-app
+
+    spec:
+
+      containers:
+
+      - name: voyage-container
+
+        image: akshatmishra05/voyageanalytics:latest
+
+        ports:
+
+        - containerPort: 5000
